@@ -22,3 +22,7 @@ but also complex workflows like parallel and conditionals
 
     FLOW : 1 model for notes , other model for quiz ,
     then third model take these 2 as inputs and merge
+
+4. CONDITIONAL CHAINS :
+    # based on user input we can direct flow to different chains
+    ex : review -> model output pos or neg , then if pos -> chain 1 , else chain 2  
