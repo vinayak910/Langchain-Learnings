@@ -1,0 +1,37 @@
+Basically the input given to model to generate/guide its output are prompts
+
+
+2 types of prompts
+--------------------
+1. text based 
+2. multi modal prompts : 
+
+	- maybe text + image (just like in chatgpt) 
+	- sound 
+	- video 
+
+in this lec: we will more focus on text
+
+
+- Prompts are super imp , because models output is very sensitive to the prompt
+
+
+Static vs dynamic prompts 
+--------------------------
+
+
+: Till now , we write prompts simply just like : 
+	- write a poem on river 
+
+ques : is this the right way ? 
+	
+	- no , in real world the user who is using application will type the prompt , which will be given to chatmodel/llm 
+	
+
+
+ideally , we want user dont directly type anything
+
+- so prepare template 
+
+
+			

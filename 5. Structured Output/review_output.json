@@ -1,0 +1,25 @@
+{
+  "key_themes": [
+    "processor performance",
+    "battery life",
+    "camera quality",
+    "S-Pen functionality",
+    "design and ergonomics",
+    "software bloatware",
+    "price"
+  ],
+  "summary": "The Samsung Galaxy S24 Ultra is a powerful smartphone with an excellent processor, long battery life, and a high-quality camera. However, it is large, heavy, and comes with pre-installed bloatware, making it a pricey option.",
+  "sentiment": "pos",
+  "pros": [
+    "Insanely powerful processor (great for gaming and productivity)",
+    "Stunning 200MP camera with incredible zoom capabilities",
+    "Long battery life with fast charging",
+    "S-Pen support is unique and useful"
+  ],
+  "cons": [
+    "Heavy and large, making one-handed use uncomfortable",
+    "Comes with pre-installed bloatware",
+    "Expensive at $1,300"
+  ],
+  "name": "Nitish Singh"
+}

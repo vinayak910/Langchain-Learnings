@@ -1,0 +1,20 @@
+# OUTPUT PARSERS 
+------------------
+
+- We studied about open source llm and closed source
+- generally , closed source have the capability for giving structured ouput 
+- but open source llm are not that much capable of giving structured output
+- but we can use some techniques to make them give structured output
+
+# Common output parsers techniques:
+------------------------------------
+1. String Output Parser:
+    - takes llm response as string and returns it as is
+    - so what is the use ? 
+    - useful when you want to process the string response later in your code
+    - or when you want to chain multiple llm calls and pass the output of one as input to another
+
+2. Json Output Parser:
+    - tries to parse the llm response as json
+    - useful when you want to extract specific fields from the llm response
+    - or when you want to validate the llm response against a json schema

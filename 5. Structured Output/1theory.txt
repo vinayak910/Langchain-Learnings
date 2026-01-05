@@ -1,0 +1,92 @@
+
+UNSTRUCTURED OUTPUT 
+--------------------------
+
+WE give text as input to llm and get text as output 
+- but this text is an unstructured output 
+- it is not in well defined format 
+
+
+STRUCTURED OUTPUT : 
+----------------------
+
+- output that is in well defined format 
+- enabling easier to parse and work with programmitcally 
+- ex JSON output 
+
+
+NEED OF STRUCTURED OUTPUT 
+--------------------------
+
+- LLMs by default give unstructured output (natural language, like paragraphs). 
+- That’s useful for humans, but not always for machines or automation pipelines.
+
+1. Data extraction 
+
+- LLMs read unstructured text (documents, emails, reports) → output structured data.
+- Benefit: This structured output can be pushed into database automatically 
+
+
+2. API BUILDING 
+
+- LLMs can act like backends that return structured data instead of natural language
+- Example: Weather API (via LLM)
+
+Prompt to LLM:
+"What’s the weather in New Delhi right now?"
+
+Unstructured Output (not useful for software):
+
+    "Currently, the weather in New Delhi is 34°C with clear skies and a slight breeze."
+
+structured output : {
+  "city": "New Delhi",
+  "temperature_celsius": 34,
+  "condition": "Clear",
+  "wind": "Light breeze"
+}
+
+Benefit: Now your frontend app (mobile/web) can directly use this JSON response to display weather in UI cards.
+
+
+3 AGENT : 
+
+- ex : travel booking agent 
+User: “Book me a flight from Delhi to Bangalore on 5th Sep, economy class.”
+
+
+LLM Structured Output for API call:
+{
+  "task": "flight_booking",
+  "source": "Delhi",
+  "destination": "Bangalore",
+  "date": "2025-09-05",
+  "class": "economy"
+}
+The agent uses this JSON to call a flight booking API, get results, and then respond.
+
+
+
+WAYS TO GET STRUCTURED OUTPUT 
+------------------------------
+
+- THere are some llms which can give structured output and some dont 
+- we can use .with_stuctured_output() for llms which can give structured output 
+- and for those llm which cant we need to use output parsers 
+
+
+with_stuctured_output()
+--------------------------
+
+- using this we can generally create 3 types of structured output 
+
+1. typed dict 
+2. pydantic 
+3. json schema 
+
+# with_structured_output() in langchain_huggingface does not support Pydantic schemas or function calling.
+# This feature is only fully supported in OpenAI / Anthropic / Mistral integrations, not in HuggingFace models.
+
+
+
+

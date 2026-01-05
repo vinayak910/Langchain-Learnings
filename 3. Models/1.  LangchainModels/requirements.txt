@@ -1,0 +1,56 @@
+# libraries to install 
+
+langchain
+# open ai intergration
+langchain-openai
+openai
+
+# anthropic intergration 
+langchain-anthropic
+
+# google gemini(PaLM) integration 
+langchain-google-genai
+google-generativeai
+
+# Hugging Face integration 
+langchain-huggingface
+transformers
+huggingface-hub
+
+# environment variable management
+python-dotenv
+
+# Machine learning Utilities
+numpy 
+scikit-learn
+
+# 🧠 LangChain core
+langchain
+
+# 💬 LLM Integrations
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+langchain-huggingface
+
+# 🔑 Hugging Face + Transformers stack
+transformers
+huggingface-hub
+accelerate
+sentencepiece  # Required for many HF models
+
+# ⚙️ GPU-enabled PyTorch (CUDA 12.1 version)
+torch==2.2.2+cu121
+torchaudio==2.2.2+cu121
+torchvision==0.17.2+cu121
+# NOTE: These must be installed using the custom index below:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# 🧪 ML utilities
+numpy
+scikit-learn
+
+# 🔐 Env management
+python-dotenv
+
+

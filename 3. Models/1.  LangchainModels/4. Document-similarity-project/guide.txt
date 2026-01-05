@@ -1,0 +1,22 @@
+SETUP : 
+
+- we have docs(5 sentences/ vector)
+- we have our own sentence /vector
+(all are of same shape)
+- we will tell which doc is similar to our sentence
+
+
+FLOW : 
+------
+- convert the doc into embeddings 
+- convert the sentence into embedding 
+- then do semantic search 
+
+
+- so we have 5 vectors of n dimension(let's say 300) in space 
+
+- now a new vector(300 dim) comes into that space 
+
+- now we will find similarity(using cosine distance) to each vector , whicheever has the most similarity will be the vector 
+- then we will convert back to its original form 
+

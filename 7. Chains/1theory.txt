@@ -1,0 +1,11 @@
+# CHAINS 
+---------
+
+- Even a small llm app is made of multiple steps 
+- problem : individual executing each step is tedious
+- solution : chain together multiple calls to llms and other utilities 
+            to automate the entire process
+
+- one input and pipeline triggers multiple actions
+- using chains we can not only make sequential pipelines ,
+but also complex workflows like parallel and conditionals
