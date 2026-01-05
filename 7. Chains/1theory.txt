@@ -9,3 +9,16 @@
 - one input and pipeline triggers multiple actions
 - using chains we can not only make sequential pipelines ,
 but also complex workflows like parallel and conditionals
+
+
+1. SIMPLE CHAINS 
+2. SEQUENTIAL CHAINS 
+3. PARALLEL CHAINS : 
+    here ,
+    # we get detailed doc on topic (ex : linear regression)
+    # we will generate 2 things 
+    # 1. NOTES 
+    # 2. QUIZ (combine and show to user)
+
+    FLOW : 1 model for notes , other model for quiz ,
+    then third model take these 2 as inputs and merge
