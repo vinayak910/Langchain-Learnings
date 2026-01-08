@@ -1,0 +1,29 @@
+TO run chains, we need to know the concept of runnables
+
+ RUNNABLES 
+ -----------
+
+ Here's a summary of the key points:
+
+Recap of Chains (0:11, 1:39-3:09): The video begins with a recap of Chains, emphasizing their importance in LangChain and how they are built with the help of Runnables behind the scenes. Different types of chains like sequential, parallel, and conditional chains were previously discussed.
+
+Why Runnables Exist (3:12-33:44):
+
+- Rise of LLM-based Applications (3:19-5:09): Following the release of ChatGPT and OpenAI's APIs in late 2022, the LangChain team realized the growing demand for LLM-based applications.
+Standardizing LLM Interactions (5:10-6:46): Initially, LangChain aimed to provide a unified framework for interacting with different LLMs (OpenAI, Anthropic, Google, Mistral) that had varying APIs, making it easier for developers to switch between models with minimal code changes. This led to LangChain's initial popularity.
+Beyond LLM Interaction (6:47-10:43): The LangChain team then identified that interacting with LLMs was only a small part of building complex LLM-based applications (e.g., PDF readers involve loading, splitting, embedding, storing, retrieving, and parsing documents). To simplify this, LangChain developed separate components for each of these tasks (e.g., document loaders, text splitters, embedding models, vector databases, retrievers, output parsers, memory components).
+The Problem with Chains (26:44-33:02): As more components were added, LangChain introduced "Chains" to automate common multi-component tasks (e.g., LLMChain for prompt formatting and LLM prediction, RetrievalQAChain for RAG workflows). However, this led to an explosion of specialized Chain functions, resulting in:
+A large and difficult-to-maintain codebase (27:16-27:32).
+A steep learning curve for new AI engineers due to the sheer number of Chains and understanding when to use each (27:32-28:26).
+The core issue was that the initial components were not standardized (30:02-32:41), meaning they had different methods for interaction (e.g., predict for LLM, format for Prompt Template, get_relevant_documents for Retriever). This lack of a common interface necessitated custom Chain functions to connect them.
+What are Runnables? (33:44-39:46): Runnables were introduced to solve the standardization problem.
+
+Unit of Work (33:49-34:37): Runnables are described as a "unit of work" that takes an input, processes it, and returns an output.
+Common Interface (34:40-35:41): Every Runnable in LangChain follows a common interface with standardized methods like invoke (for single inputs), batch (for multiple inputs), and stream (for streaming output).
+Connectable (35:47-36:40): Due to their common interface, Runnables can be seamlessly connected, where the output of one Runnable automatically becomes the input for the next.
+Composability (36:44-37:23): A sequence of connected Runnables itself acts as a Runnable, allowing for the creation of arbitrarily complex workflows by combining smaller Runnable workflows.
+Lego Block Analogy (37:33-39:23): The video uses the analogy of Lego blocks to illustrate these four principles, where each Lego block (Runnable) has a purpose, a common connection interface, can be connected, and the resulting structure is also a Lego block.
+Code Demo (39:47-46:48): The video then moves to a live coding session to demonstrate the creation of dummy NakliLLM and NakliPromptTemplate classes, showcasing how they would behave as non-standardized components, leading into the need for Runnables to facilitate seamless connections.
+
+
+
