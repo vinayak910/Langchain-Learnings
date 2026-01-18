@@ -2,3 +2,6 @@
 .env.*
 *.pdf
 .venv310
+
+anaconda_projects/
+.ipynb_checkpoints/
